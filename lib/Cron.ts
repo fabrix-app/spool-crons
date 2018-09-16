@@ -1,4 +1,5 @@
 import { FabrixApp } from '@fabrix/fabrix'
+import { FabrixGeneric } from '@fabrix/fabrix/dist/common'
 
 const CronProxyHandler = {
 
@@ -39,8 +40,7 @@ const CronProxyHandler = {
   }
 }
 
-export class Cron {
-  public app
+export class Cron extends FabrixGeneric {
   public scheduler
   private _uptime_delay
   private _uptime
@@ -50,11 +50,9 @@ export class Cron {
   ]
 
   constructor (app: FabrixApp) {
+    super(app)
+
     Object.defineProperties(this, {
-      app: {
-        enumerable: false,
-        value: app
-      },
       scheduler: {
         enumerable: false,
         value: app.scheduler
