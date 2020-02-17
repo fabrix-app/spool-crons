@@ -1,5 +1,5 @@
 import { ExtensionSpool } from '@fabrix/fabrix/dist/common/spools/extension'
-import * as schedule from 'node-schedule'
+import schedule from 'node-schedule'
 import { Crons } from './Crons'
 import { Validator } from './validator'
 

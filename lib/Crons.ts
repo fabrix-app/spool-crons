@@ -1,6 +1,6 @@
 import { FabrixApp } from '@fabrix/fabrix'
 import { clone } from 'lodash'
-import * as schedule from 'node-schedule'
+import schedule from 'node-schedule'
 import { Utils } from './utils'
 
 export const Crons = {
